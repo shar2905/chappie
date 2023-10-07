@@ -1,12 +1,13 @@
-from microbit import *
-import speech
-
-speech.say("HI   MADAM")
-sleep(1000)
-import speech
-
-speech.say("I AM CHAPPIE")
-sleep(1000)
-pin0.write_analog(180)
-sleep(1000)
-pins.servo_write_pin(AnalogPin.P0, 30)
+def on_forever():
+    basic.show_string("Hi Madam")
+    pins.servo_write_pin(AnalogPin.P0, 116)
+    basic.show_string("My names is Chappie")
+    basic.show_icon(IconNames.HEART)
+    basic.show_string("Can i ask you a question Madam ?")
+    basic.show_string("Which is the most used programming language in the world ?")
+    basic.show_string("A.Javascript")
+    basic.show_string("B.Python")
+    basic.show_string("C.MakeCode")
+    basic.show_string("Thank you for answering my question Madam ")
+    basic.show_string("BYE!")
+basic.forever(on_forever)
